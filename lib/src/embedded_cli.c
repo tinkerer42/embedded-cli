@@ -1164,3 +1164,16 @@ static uint16_t getTokenPosition(const char *tokenizedStr, uint16_t pos) {
     else
         return CLI_TOKEN_NPOS;
 }
+
+
+void embeddedCliSetAutoComplete(EmbeddedCli *cli, bool state)
+{
+    PREPARE_IMPL(cli);
+    if (state) {
+        SET_FLAG(impl->flags, CLI_FLAG_AUTOCOMPLETE_ENABLED);
+    } else {
+        UNSET_U8FLAG(impl->flags, CLI_FLAG_AUTOCOMPLETE_ENABLED);
+    }
+}
+
+

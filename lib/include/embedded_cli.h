@@ -298,6 +298,13 @@ uint16_t embeddedCliFindToken(const char *tokenizedStr, const char *token);
  */
 uint16_t embeddedCliGetTokenCount(const char *tokenizedStr);
 
+
+/*
+ * Guy Added:
+ */
+
+void embeddedCliSetAutoComplete(EmbeddedCli *cli, bool state);
+
 #ifdef __cplusplus
 }
 #endif
